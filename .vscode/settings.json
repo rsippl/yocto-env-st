@@ -1,0 +1,10 @@
+{
+    "files.watcherExclude": {
+        "cache/**": true,
+        "workspace/build/**": true
+    },
+    "search.exclude": {
+        "cache": true,
+        "workspace/build": true
+    }
+}
