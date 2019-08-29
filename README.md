@@ -75,3 +75,14 @@ Copy `conf` from `workspace/build` to the project's root dir, in order to add `l
 . ./init-env
 bitbake ...
 ```
+
+### Creating an SD Card Image
+
+```
+cd workspace/build/tmp-glibc/deploy/images/stm32mp1/scripts
+./create_sdcard_from_flashlayout.sh ../flashlayout_st-image-weston/FlashLayout_sdcard_stm32mp157c-dk2-basic.tsv
+```
+
+This creates a file `flashlayout_st-image-weston_FlashLayout_sdcard_stm32mp157c-dk2-basic.raw`
+in `workspace/build/tmp-glibc/deploy/images/stm32mp1/scripts`. Use dd or (safer)
+balenaEtcher to write it to an SD card.
