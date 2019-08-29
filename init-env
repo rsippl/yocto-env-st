@@ -6,7 +6,7 @@ cd /opt/yocto/workspace
 # Using TEMPLATECONF doesn't seem to work reliably e.g. with OpenSTLinux.
 if [ -d /opt/yocto/conf ]; then
    mkdir -p build
-   ln -sf ../../conf build/conf
+   ln -sf ../../conf build/
 fi
 
 export DISTRO=openstlinux-weston
