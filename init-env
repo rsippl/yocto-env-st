@@ -9,10 +9,6 @@ if [ -d /opt/yocto/conf ]; then
    ln -sf ../../conf build/conf
 fi
 
-# TODO source the right env init script; this one's for poky:
-source layers/poky/oe-init-build-env build
-
-# Use this instead for STM32MP1:
-#export DISTRO=openstlinux-weston
-#export MACHINE=stm32mp1
-#source layers/meta-st/scripts/envsetup.sh build
+export DISTRO=openstlinux-weston
+export MACHINE=stm32mp1
+source layers/meta-st/scripts/envsetup.sh build
