@@ -80,9 +80,9 @@ bitbake ...
 
 ```
 cd workspace/build/tmp-glibc/deploy/images/stm32mp1/scripts
-./create_sdcard_from_flashlayout.sh ../flashlayout_st-image-weston/FlashLayout_sdcard_stm32mp157c-dk2-basic.tsv
+./create_sdcard_from_flashlayout.sh ../flashlayout_st-image-core-min/FlashLayout_sdcard_stm32mp157c-dk2-basic.tsv
 ```
 
-This creates a file `flashlayout_st-image-weston_FlashLayout_sdcard_stm32mp157c-dk2-basic.raw`
+This creates a file `flashlayout_st-image-core-min_FlashLayout_sdcard_stm32mp157c-dk2-basic.raw`
 in `workspace/build/tmp-glibc/deploy/images/stm32mp1/scripts`. Use dd or (safer)
 balenaEtcher to write it to an SD card.
