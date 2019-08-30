@@ -9,6 +9,6 @@ if [ -d /opt/yocto/conf ]; then
    ln -sf ../../conf build/
 fi
 
-export DISTRO=openstlinux-weston
+export DISTRO=openstlinux-min
 export MACHINE=stm32mp1
 source layers/meta-st/scripts/envsetup.sh build
