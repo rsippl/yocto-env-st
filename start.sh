@@ -16,6 +16,7 @@ usage() {
 
 container_name="yocto-env"
 image_tag="yocto-env:1.0"
+serial_dev="/dev/ttyACM0"
 
 # rough check to see if we are in correct directory
 dirs_to_check=( "./cache/downloads" "./cache/sstate" "./home" )
@@ -95,6 +96,7 @@ else
         ${arg_x11_forward} \
         ${arg_privileged} \
         --volume "${PWD}/home":/home/yocto \
+        --device=${serial_dev}:${serial_dev} \
         ${image_tag} \
         sudo bash -c "\
         groupadd -g 7777 yocto && \

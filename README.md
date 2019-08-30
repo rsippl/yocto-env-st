@@ -15,6 +15,8 @@
 * `init-env`
     * initializes the environment variables, so you can issue commands like `bitbake` etc.
     * source it *every time* you start the container: `source ./init-env`
+* `serial.sh`
+    * connects to the board's serial port (via /dev/ttyACM0)
 
 ### Directories
 * `cache`
@@ -86,3 +88,5 @@ cd workspace/build/tmp-glibc/deploy/images/stm32mp1/scripts
 This creates a file `flashlayout_st-image-core-min_FlashLayout_sdcard_stm32mp157c-dk2-basic.raw`
 in `workspace/build/tmp-glibc/deploy/images/stm32mp1/scripts`. Use dd or (safer)
 balenaEtcher to write it to an SD card.
+
+Connect to the board via USB, then use `serial.sh` to watch it boot.
