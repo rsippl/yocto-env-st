@@ -1,5 +1,7 @@
 ## Docker based development environment for Yocto / OpenSTLinux on STM32MP1
 
+Tested with a STM32MP157C-DK2.
+
 ### Scripts
 * `build-docker-image.sh`
     * builds a Docker image locally, based on `docker/Dockerfile`
@@ -15,6 +17,8 @@
 * `init-env`
     * initializes the environment variables, so you can issue commands like `bitbake` etc.
     * source it *every time* you start the container: `source ./init-env`
+* `create-sdcard.sh`
+    * creates a raw file which can be written to an SD card
 * `serial.sh`
     * connects to the board's serial port (via /dev/ttyACM0)
 
@@ -75,14 +79,13 @@ Copy `conf` from `workspace/build` to the project's root dir, in order to add `l
 ```
 ./start.sh
 . ./init-env
-bitbake ...
+bitbake st-image-core-min
 ```
 
 ### Creating an SD Card Image
 
 ```
-cd workspace/build/tmp-glibc/deploy/images/stm32mp1/scripts
-./create_sdcard_from_flashlayout.sh ../flashlayout_st-image-core-min/FlashLayout_sdcard_stm32mp157c-dk2-basic.tsv
+./create-sdcard.sh
 ```
 
 This creates a file `flashlayout_st-image-core-min_FlashLayout_sdcard_stm32mp157c-dk2-basic.raw`
