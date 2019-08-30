@@ -22,6 +22,9 @@ RUN apt-get -y install python3-gi python-pip python3-aptdaemon.gtk3widgets
 RUN apt-get -y install locales apt-utils sudo && dpkg-reconfigure locales && locale-gen en_US.UTF-8 && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 ENV LANG en_US.utf8
 
+# for creating SD card image
+RUN apt-get -y install gdisk
+
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
