@@ -98,11 +98,11 @@ else
     docker container run \
         -it \
         --rm \
-        -v "${PWD}":/opt/yocto \
         --name ${container_name} \
         ${arg_net_forward} \
         ${arg_x11_forward} \
         ${arg_privileged} \
+        --volume "${PWD}":/opt/yocto \
         --volume "${PWD}/home":/home/yocto \
         ${device_opt} \
         ${image_tag} \
