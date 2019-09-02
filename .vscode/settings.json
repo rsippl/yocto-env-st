@@ -1,10 +1,12 @@
 {
-    "files.watcherExclude": {
-        "cache/**": true,
-        "workspace/build/**": true
-    },
-    "search.exclude": {
-        "cache": true,
-        "workspace/build": true
-    }
+  "files.watcherExclude": {
+    "cache/**": true,
+    "workspace/build/**": true,
+    "workspace/.repo/**": true
+  },
+  "search.exclude": {
+    "cache": true,
+    "workspace/build": true,
+    "workspace/.repo": true
+  }
 }
