@@ -56,6 +56,7 @@ containers as non-root user:
 docker run --rm hello-world
 ```
 
+Optional:
 * add the layers your project depends on to `clone-layers.sh` 
   * you'll eventually have to add them to `conf/bblayers.conf`, too
 * check `init-env`: make sure the right environment init script is sourced
