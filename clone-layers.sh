@@ -11,4 +11,4 @@ repo init -u https://github.com/STMicroelectronics/oe-manifest.git -b refs/tags/
 repo sync
 
 cd ${layers_dir}/meta-st
-git clone git@github.com:rsippl/meta-st-min.git
+git clone https://github.com/rsippl/meta-st-min.git
